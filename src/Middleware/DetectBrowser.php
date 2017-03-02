@@ -16,6 +16,11 @@ class DetectBrowser
         return Config::get('detect-browser.browsers.'.$value);
     }
 
+    private function getConfigIsEnabled()
+    {
+        return $this->getConfigValue('is_enabled');
+    }
+
     private function getConfigBrowsers()
     {
         return $this->getConfigValue('browsers');
@@ -38,6 +43,10 @@ class DetectBrowser
 
     public function handle($request, Closure $next, $guard = null)
     {
+        if(!$this->getConfigIsEnabled()){
+            return $next($request);
+        }
+
         $agent = new Agent();
         $browser = $agent->browser();
         $version = $agent->version($browser);

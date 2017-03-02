@@ -15,7 +15,7 @@ composer update
     Vis\DetectBrowser\DetectBrowserServiceProvider::class,
 ```
 
-Публикуем css,icons,view, config
+Публикуем css,icons,view,config
 ```json
    php artisan vendor:publish --provider="Vis\DetectBrowser\DetectBrowserServiceProvider"
 ```

@@ -1,6 +1,8 @@
 <?php
 return array(
 
+    'is_enabled' => true,
+
     'view_location' => 'errors.old_browser',
 
     'browsers' => array(
