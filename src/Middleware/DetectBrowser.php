@@ -13,7 +13,7 @@ class DetectBrowser
 {
     private function getConfigValue($value)
     {
-        return Config::get('detect-browser.'.$value);
+        return Config::get('detect-browser.browsers.'.$value);
     }
 
     private function getConfigBrowsers()
@@ -28,7 +28,7 @@ class DetectBrowser
 
     private function getAllowedVersion($browsers,$browser)
     {
-        return isset($browsers['browsers'][$browser]) ? $browsers['browsers'][$browser]['allowed_version'] : 0;
+        return isset($browsers[$browser]) ? $browsers[$browser]['allowed_version'] : 0;
     }
 
     private function getMajorVersion($version)
@@ -46,9 +46,6 @@ class DetectBrowser
 
         $majorVersion   = $this->getMajorVersion($version);
         $allowedVersion = $this->getAllowedVersion($browsers,$browser);
-
-
-
 
         if($allowedVersion > $majorVersion){
 

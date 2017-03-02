@@ -1,9 +1,8 @@
-
 В composer.json добавляем в блок require
 ```json
  "vis/detect_browser_l5": "1.*"
-```
 
+```
 Выполняем
 ```json
 composer update
