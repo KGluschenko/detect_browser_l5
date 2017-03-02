@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'PF DinDisplay Pro Regular';
+    src: url('/fonts/fontscore.com_p_pfdindisplayproregular.ttf');
+}
+html, body {
+    background-color: #f3f5f6;
+    height: 100%;
+    font-family: 'PF DinDisplay Pro Regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+.old-body {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.old-logo {
+    margin-bottom: 85px;
+}
+.old-body h2 {
+    font-size: 36px;
+    line-height: 1.4;
+    max-width: 890px;
+    margin-bottom: 35px;
+}
+.old-body p {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 85px;
+}
+.browsers-container {
+    font-size:0;
+}
+.browser {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    padding: 0 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.browser-name {
+    display: block;
+    margin: 45px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.browser-download {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f42306;
+    border: 2px solid #f42306;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+.browser-download span {
+    position: relative;
+}
+.browser-img {
+    height: 100px;
+    width: auto;
+}
+.browser-download:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background:#f42306;
+    transition: width 0.3s;
+}
+.browser-download:hover {
+    color: #fff;
+}
+.browser-download:hover:before {
+    width: 100%;
+}
+
+@media (max-width:745px) {
+    .old-logo {
+        margin-bottom: 30px;
+    }
+    .old-body p {
+        margin-bottom: 30px;
+    }
+    .browser-name {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width:615px) {
+    html, body {
+        height: auto;
+    }
+    body {
+        padding-top: 40px;
+    }
+    .old-body h2 {
+        font-size: 24px;
+    }
+    .browser {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
