@@ -1,3 +1,5 @@
+Simple packages to show update browser page if user browser is outdated
+
 В composer.json добавляем в блок require
 ```json
  "vis/detect_browser_l5": "1.*"
