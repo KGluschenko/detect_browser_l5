@@ -24,3 +24,5 @@ composer update
 ```php
     \Vis\DetectBrowser\Middleware\DetectBrowser::class,
 ```
+
+После публикации будет создана view в папке resources/views/errors/old_browser.blade.php, которую можно изменять по необходимости.

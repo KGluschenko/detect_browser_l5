@@ -15,7 +15,7 @@ composer update
     Vis\DetectBrowser\DetectBrowserServiceProvider::class,
 ```
 
-Публикуем css,icons,view, config
+Публикуем css,icons,view,config
 ```json
    php artisan vendor:publish --provider="Vis\DetectBrowser\DetectBrowserServiceProvider"
 ```
@@ -24,3 +24,5 @@ composer update
 ```php
     \Vis\DetectBrowser\Middleware\DetectBrowser::class,
 ```
+
+После публикации будет создана view в папке resources/views/errors/old_browser.blade.php, которую можно изменять по необходимости.
