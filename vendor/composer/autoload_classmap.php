@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Http\\Middleware\\DetectBrowser' => $baseDir . '/src/Middleware/DetectBrowser.php',
+    'Vis\\DetectBrowser\\Middleware\\DetectBrowser' => $baseDir . '/src/Middleware/DetectBrowser.php',
 );

@@ -21,7 +21,7 @@ class ComposerStaticInit919bc428085ee9d0e3975eaff0f3e0f5
     );
 
     public static $classMap = array (
-        'App\\Http\\Middleware\\DetectBrowser' => __DIR__ . '/../..' . '/src/Middleware/DetectBrowser.php',
+        'Vis\\DetectBrowser\\Middleware\\DetectBrowser' => __DIR__ . '/../..' . '/src/Middleware/DetectBrowser.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
