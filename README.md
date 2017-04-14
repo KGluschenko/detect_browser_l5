@@ -5,24 +5,23 @@ Simple packages to show update browser page if user browser is outdated
  "vis/detect_browser_l5": "1.*"
 ```
 
-Выполняем
+Execute
 ```json
 composer update
 ```
 
-Добавляем в app.php в массив providers
+Add provider to providers array in app.php
 ```php
     Vis\DetectBrowser\DetectBrowserServiceProvider::class,
 ```
 
-Публикуем css,icons,view,config
+Publish css,icons,view,config
 ```json
-   php artisan vendor:publish --provider="Vis\DetectBrowser\DetectBrowserServiceProvider"
+   php artisan vendor:publish --provider="Vis\DetectBrowser\DetectBrowserServiceProvider" --force
 ```
+After publishing view template will be created at resources/views/errors/old_browser.blade.php and can be manually edited if needed.
 
-Добавляем в app\Http\Kernel.php в переменную $middlewareGroups в массив 'web'
+Add middleware to 'web' array in $middlewareGroups at app\Http\Kernel.php
 ```php
     \Vis\DetectBrowser\Middleware\DetectBrowser::class,
 ```
-
-После публикации будет создана view в папке resources/views/errors/old_browser.blade.php, которую можно изменять по необходимости.

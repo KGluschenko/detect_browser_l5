@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    {!!  Minify::stylesheet(array(
-            '/packages/vis/detect-browser/css/normalize.css',
-            '/packages/vis/detect-browser/css/detect_browser.css',
-         ), array('defer' => true))
-    !!}
+    <link rel="stylesheet" type="text/css" href="/packages/vis/detect-browser/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/packages/vis/detect-browser/css/detect_browser.css">
 
 </head>
 
@@ -21,7 +18,7 @@
             <p>Предлагаем загрузить новые, это займет несколько минут</p>
             <div class="browsers-container">
                 @foreach($browsers as $browser)
-                    @if(!$browser['download_link']) @continue @endif
+                    @if(!isset($browser['download_link'])||!$browser['download_link']) @continue @endif
                     <div class="browser">
                         <img src="{{asset($browser['icon'])}}" alt="" class="browser-img">
                         <span class="browser-name">{{$browser['full_name']}}</span>

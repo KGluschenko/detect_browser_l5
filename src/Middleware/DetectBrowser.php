@@ -41,7 +41,7 @@ class DetectBrowser
         return (int) explode(".", $version)[0];
     }
 
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
         if(!$this->getConfigIsEnabled()){
             return $next($request);

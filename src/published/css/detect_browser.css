@@ -1,11 +1,6 @@
-@font-face {
-    font-family: 'PF DinDisplay Pro Regular';
-    src: url('/fonts/fontscore.com_p_pfdindisplayproregular.ttf');
-}
 html, body {
     background-color: #f3f5f6;
     height: 100%;
-    font-family: 'PF DinDisplay Pro Regular', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
