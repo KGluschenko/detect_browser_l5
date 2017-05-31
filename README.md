@@ -2,7 +2,7 @@ Simple packages to show update browser page if user browser is outdated
 
 Execute
 ```json
-    composer require "vis/detect_browser_l5":"1.*"
+    composer require "vis/detect-browser_l5":"1.*"
 ```
 
 Add provider to providers array in app.php
